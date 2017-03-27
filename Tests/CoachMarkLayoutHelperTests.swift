@@ -79,7 +79,7 @@ class CoachMarkLayoutHelperTests: XCTestCase {
 
     }
 
-    private func assert(constraints constraintsToTest: [[NSLayoutConstraint]]) {
+    fileprivate func assert(constraints constraintsToTest: [[NSLayoutConstraint]]) {
         XCTAssertFalse(constraintsToTest[0].isEmpty)
         XCTAssertFalse(constraintsToTest[1].isEmpty)
         XCTAssertFalse(constraintsToTest[2].isEmpty)
@@ -93,7 +93,7 @@ class CoachMarkLayoutHelperTests: XCTestCase {
         XCTAssertTrue(constraintsToTest[2] != constraintsToTest[3])
     }
 
-    private func constraints(using layoutDirection: UIUserInterfaceLayoutDirection = .leftToRight) -> [[NSLayoutConstraint]] {
+    fileprivate func constraints(using layoutDirection: UIUserInterfaceLayoutDirection = .leftToRight) -> [[NSLayoutConstraint]] {
         var coachMark1 = CoachMark()
 
         coachMark1.cutoutPath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 50, height: 50))

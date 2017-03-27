@@ -188,7 +188,7 @@ class CoachMarkHelperTests: XCTestCase {
 }
 
 class MockedFlowManager: FlowManager {
-    private var _pause = false;
+    fileprivate var _pause = false;
 
     override var paused: Bool {
         get {

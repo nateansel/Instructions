@@ -88,7 +88,7 @@ class CoachMarkTests: XCTestCase {
         XCTAssertEqual(coachMark.pointOfInterest, CGPoint(x: 30, y: 20))
     }
 
-    private func computeOrientation(of coachMark: inout CoachMark,
+    fileprivate func computeOrientation(of coachMark: inout CoachMark,
                                     using cutoutPath: UIBezierPath = UIBezierPath(rect: CGRect(x: 30, y: 320, width: 30, height: 60))) {
         let overlayFrame = CGRect(x: 0, y: 0, width: 320, height: 480)
 

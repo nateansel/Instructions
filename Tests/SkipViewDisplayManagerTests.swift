@@ -147,10 +147,10 @@ class MockedDataSource: CoachMarksControllerProxyDataSource {
 class ConstraintsMockedDataSource: MockedDataSource {
     override func constraintsForSkipView(_ skipView: UIView,
                                 inParent parentView: UIView) -> [NSLayoutConstraint]? {
-        return [makeConstraint(skipView: skipView, inParent: parentView)]
+        return [makeConstraint(skipView, inParent: parentView)]
     }
 }
 
-private func makeConstraint(skipView: UIView, inParent parentView: UIView) -> NSLayoutConstraint {
+private func makeConstraint(_ skipView: UIView, inParent parentView: UIView) -> NSLayoutConstraint {
     return NSLayoutConstraint(item: skipView, attribute: .bottom, relatedBy: .equal, toItem: parentView, attribute: .bottom, multiplier: 1, constant: 0)
 }
